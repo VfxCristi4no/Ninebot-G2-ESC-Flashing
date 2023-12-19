@@ -63,7 +63,7 @@ Place the right side of the PCB vertically on the edge of the can and start hamm
 
 ---
 
-#### Drilling
+### Drilling
 
 If this all sounds too much for you, you may consider drilling a hole through the case to reach the debug-points. This can be easily done with a normal driller-tip. Please don't forget to put something rubbust between the PCB and the case so that the PCB is protected from damage. An old ram stick is perfect for this. The dimensions for the hole are shown below.
 
@@ -96,12 +96,14 @@ What you need:
 
 - <a href="https://www.ebay.de/itm/115319785226?chn=ps&_ul=DE&_trkparms=ispr%3D1&amdata=enc%3A17T2SU-viRKWpoM3NtzlsPQ52&norover=1&mkevt=1&mkrid=707-134425-41852-0&mkcid=2&mkscid=101&itemid=115319785226&targetid=1716911581919&device=c&mktype=pla&googleloc=9044460&poi=&campaignid=17943303986&mkgroupid=140642150118&rlsatarget=pla-1716911581919&abcId=9301060&merchantid=494547460&gclid=CjwKCAiAg9urBhB_EiwAgw88mdq0WZeXU5NVyY6s54l7l0te7RXJ1KIycyPAX9uf75ledy23oKCA1hoCJeAQAvD_BwE">OTG-Adapter (USB-C to USB-Female)</a>
 
-**1. Connecting**
+#### Connecting
 
 <img src="pictures/ST-LINK-connections.jpg"
  width="600">
 
-**2. Flashing 3rd-party-firmware**
+---
+
+### Firmware
 
 At the current status (December 11, 2023), the only way of speedhacking your ESC, is with XiaoDash. A return to stock firmware is not possible. This means once the controller has flashed XDFW (XiaoDash firmware), the license MUST be purchased, otherwise the dashboard will display a permanent error code. 
 
