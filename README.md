@@ -1,5 +1,20 @@
 # Ninebot G2 ESC ST-Link
 
+### Table of Contents
+
+- [Preface](#preface)
+- [Warning](#warning)
+- [Dissasembling](#dissasembling)
+  - [Full dissasembling](#full-dissasembling)
+  - [Drilling](#drilling)
+- [Flashing-proccess](#flashing-process)
+  - [Debug-layout](#debug-layout)
+  - [Flashing](#flashing)
+- [Firmware](#firmware)
+  - [XiaoDash](#xiaodash)
+- [Thank You!](#thank-you)
+
+---
 
 ### Preface
 
@@ -68,6 +83,8 @@ If you've made it this far: <br>Congratulations! The hardest part is done now.
 <img src="pictures/NinebotG2ESC-debug_points - Back-side.jpg"
  width="600">
 
+Please connect 5V and GND before you plug the ST-Link into your smartphone, otherwise you may short-circuit your PCB. SWDIO and SWCLK doesn't matter, they don't have very high voltage or current. If you have unmodified cables, the female cables will most likely be loose on the ESC-pins. You want to use tape to hold the connectors in place.
+
 #### Flashing
 
 What you need:
@@ -81,7 +98,8 @@ What you need:
 
 **1. Connecting**
 
-Please connect 5V and GND before you plug the ST-Link into your smartphone, otherwise you may short-circuit your PCB. SWDIO and SWCLK doesn't matter, they don't have very high voltage or current. If you have unmodified cables, the female cables will most likely be loose on the pins. You want to use tape to hold the connectors in place.
+<img src="pictures/ST-LINK-connections.jpg"
+ width="600">
 
 **2. Flashing 3rd-party-firmware**
 
@@ -89,7 +107,9 @@ At the current status (December 11, 2023), the only way of speedhacking your ESC
 
 I will update this guide as soon as ScooterHackingUtility supports the G2 as well.
 
-### <u>XiaoDash</u>
+---
+
+### XiaoDash
 
 
 What you need:
@@ -142,7 +162,7 @@ If you have now connected your ESC to the dashboard, the error code "E3" will be
 
 ---
 
-### Thank you
+### Thank you!
 
 If you've read this far, then you should now know how to flash 3rd-party-firmware on to your G2 ESC. I would like to thank both services, ScooterHackingUtility, aswell as XiaoDash, for offering such great firmware! 
 
