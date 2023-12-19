@@ -1,4 +1,4 @@
-# Ninebot G2 ESC ST-Link
+# Ninebot G2 ESC Flashing
 
 ### Table of Contents
 
