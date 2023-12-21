@@ -45,7 +45,7 @@ What you need:
 
 Place the screwdriver on the mosfet-clamp from the right side. Gently hammer the end of the screwdriver to slowly move the mosfet-clamp to the side. Example video <a href="https://imgur.com/a/qNCjqaL">here</a>.
 
-<img src="pictures/Disassembling mosfet-clamp.png"
+<img src="pictures/Dissasembling mosfet-clamp.png"
  width="300">
 
 
