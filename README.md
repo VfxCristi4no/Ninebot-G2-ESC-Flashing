@@ -1,11 +1,11 @@
-# Ninebot G2 ESC ST-Link
+# Ninebot G2 ESC Flashing
 
 ### Table of Contents
 
 - [Preface](#preface)
 - [Warning](#warning)
-- [Dissasembling](#dissasembling)
-  - [Full dissasembling](#full-dissasembling)
+- [Disassembling](#disassembling)
+  - [Full disassembling](#full-disassembling)
   - [Drilling](#drilling)
 - [Flashing-proccess](#flashing-process)
   - [Debug-layout](#debug-layout)
@@ -18,20 +18,20 @@
 
 ### Preface
 
-In this guide we will talk about how to ST-Link your Ninebot G2 ESC. We will find out where the debug-pins/electricity-pins are, how we reach them, and which provider we can use to flash 3rd-part-firmware.
+In this guide we will talk about how to ST-Link your Ninebot G2 ESC. We will find out where the debug-pins/electricity-pins are, how we reach them, and which provider we can use to flash 3rd-party-firmware.
 
 ### Warning
-Make sure to always drain your capacitors when working with your ESC. You want to do this to prevent shorts. **Step-by-step**: Plug out battery cable, leave all else cables plugged in, now turn on the scooter and wait until it turns off itself.
+Make sure to always drain your capacitors when working with your ESC. You want to do this to prevent shorts. **Step-by-step**: Unplug the battery cable (red and black), leave all other cables plugged in, now turn on the scooter and wait until it turns itself off.
 
 ---
 
-### Dissasembling
+### Disassembling
 
-We have two methods for this process, each requires different tools:
-- [Full dissasembling](#full-dissasembling)
+We have two methods for the flashing process, each requiring different tools:
+- [Full disassembling](#full-disassembling)
 - [Drilling](#drilling)
 
-#### Full dissasembling
+#### Full disassembling
 
 For the G2 ESC, there are many factors that make it difficult to reach the debug points. If you plan on making multiple mods to your ESC, then you should probably prefer this method. However, it won't be easy, you will need a lot of strength and patience. Be aware of this.
 
@@ -43,7 +43,7 @@ What you need:
 - Flathead-screwdriver
 - Vice/Screw-clamp
 
-Place the screwdriver on the mosfet-clamp from the right side. Gently hammer the end of the screwdriver and see how the mosfet-clamp slowly moves to the side with each hit. Example video <a href="https://imgur.com/a/qNCjqaL">here</a>.
+Place the screwdriver on the mosfet-clamp from the right side. Gently hammer the end of the screwdriver to slowly move the mosfet-clamp to the side. Example video <a href="https://imgur.com/a/qNCjqaL">here</a>.
 
 <img src="pictures/Dissasembling mosfet-clamp.png"
  width="300">
@@ -63,7 +63,7 @@ Place the right side of the PCB vertically on the edge of the can and start hamm
 
 ---
 
-#### Drilling
+### Drilling
 
 If this all sounds too much for you, you may consider drilling a hole through the case to reach the debug-points. This can be easily done with a normal driller-tip. Please don't forget to put something rubbust between the PCB and the case so that the PCB is protected from damage. An old ram stick is perfect for this. The dimensions for the hole are shown below.
 
@@ -96,16 +96,18 @@ What you need:
 
 - <a href="https://www.ebay.de/itm/115319785226?chn=ps&_ul=DE&_trkparms=ispr%3D1&amdata=enc%3A17T2SU-viRKWpoM3NtzlsPQ52&norover=1&mkevt=1&mkrid=707-134425-41852-0&mkcid=2&mkscid=101&itemid=115319785226&targetid=1716911581919&device=c&mktype=pla&googleloc=9044460&poi=&campaignid=17943303986&mkgroupid=140642150118&rlsatarget=pla-1716911581919&abcId=9301060&merchantid=494547460&gclid=CjwKCAiAg9urBhB_EiwAgw88mdq0WZeXU5NVyY6s54l7l0te7RXJ1KIycyPAX9uf75ledy23oKCA1hoCJeAQAvD_BwE">OTG-Adapter (USB-C to USB-Female)</a>
 
-**1. Connecting**
+#### Connecting
 
 <img src="pictures/ST-LINK-connections.jpg"
  width="600">
 
-**2. Flashing 3rd-party-firmware**
+---
 
-At the current status (December 11, 2023), the only way of speedhacking your ESC, is with XiaoDash. A return to stock firmware is not possible. This means once the controller has flashed XDFW (XiaoDash firmware), the license MUST be purchased, otherwise the dashboard will display a permanent error code. 
+### Firmware
 
-I will update this guide as soon as ScooterHackingUtility supports the G2 as well.
+Currently (December 11, 2023), the only firmware to flash your ESC with, is with XiaoDash. A return to stock firmware is not possible. This means once the controller has flashed XDFW (XiaoDash firmware), the license MUST be purchased, otherwise the dashboard will display a permanent error code. 
+
+An update will be made to the guide as soon as ScooterHackingUtility releases support for the G2.
 
 ---
 
@@ -123,7 +125,7 @@ What you need:
 <img src="pictures/XiaoDash - Step 1.jpg"
  width="300">
 
-**2. Click on "Basic" tab**
+**2. Click on the "Basic" tab**
 
 <img src="pictures/XiaoDash - Step 2.jpg"
  width="300">
@@ -143,9 +145,9 @@ What you need:
 <img src="pictures/XiaoDash - Step 5.jpg"
  width="300">
 
-Give XiaoDash the permisson to use your ST-link. Now a 10-seconds countdown will start, in those 10-seconds, you have time to attach the SWDIO-wire, and SWCLK-wire, to their designated fields. No need to rush, the timer will start again if the flash was unsuccessful.
+Give XiaoDash the permisson to use your ST-link. Now a 10-second countdown will start, in those 10-seconds, you have time to attach the SWDIO-wire, and SWCLK-wire, to their designated fields. No need to rush, the timer will start again if the flash was unsuccessful.
 
-If your flash was successful, XiaoDash show up this message:
+If your flash was successful, XiaoDash will show this message:
 
 <img src="pictures/XiaoDash - Flashing successful.png"
  width="300">
@@ -164,6 +166,6 @@ If you have now connected your ESC to the dashboard, the error code "E3" will be
 
 ### Thank you!
 
-If you've read this far, then you should now know how to flash 3rd-party-firmware on to your G2 ESC. I would like to thank both services, ScooterHackingUtility, aswell as XiaoDash, for offering such great firmware! 
+If you've read this far, then you should now know how to flash 3rd-party-firmware onto your G2 ESC. I would like to thank both services, ScooterHackingUtility, aswell as XiaoDash, for offering such great firmware! 
 
 This guide was written from (11/12/2023) to (16/12/2023), and took a lot of effort. If you appreciate my work, a <a href="https://www.paypal.com/donate/?hosted_button_id=JXSMGF7S8TG3Y">donation</a> would be greatly appreciated.
