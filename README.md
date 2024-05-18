@@ -18,10 +18,10 @@
 
 ### Preface
 
-In this guide we will talk about how to ST-Link your Ninebot G2 ESC. We will find out where the debug-pins/electricity-pins are, how we reach them, and which provider we can use to flash 3rd-party-firmware.
+In this guide we will talk about how to ST-Link your Ninebot G2 ESC. We will find out where the debug and power pins are, how we reach them, and which provider we can use to flash 3rd-party-firmware.
 
 ### Warning
-Make sure to always drain your capacitors when working with your ESC. You want to do this to prevent shorts. **Step-by-step**: Unplug the battery cable (red and black), leave all other cables plugged in, now turn on the scooter and wait until it turns itself off.
+Make sure to always drain your capacitors when working with your ESC. You want to do this to prevent shorts. **Step-by-step**: Unplug the battery cable (red and black), leave all other cables plugged in, now turn on the scooter, and wait until it turns itself off.
 
 ---
 
@@ -37,13 +37,13 @@ For the G2 ESC, there are many factors that make it difficult to reach the debug
 
 Step-by-step:<br>
 
-**1. Dissasemble mosfet-clamp**
+**1. Disassemble mosfet-clamp**
 
 What you need:
 - Flathead-screwdriver
 - Vice/Screw-clamp
 
-Place the screwdriver on the mosfet-clamp from the right side. Gently hammer the end of the screwdriver to slowly move the mosfet-clamp to the side. Example video <a href="https://imgur.com/a/qNCjqaL">here</a>.
+Place the screwdriver on the MOSFET clamp from the right side. Gently hammer the end of the screwdriver to slowly move the mosfet-clamp to the side. Example video <a href="https://imgur.com/a/qNCjqaL">here</a>.
 
 <img src="pictures/Dissasembling mosfet-clamp.png"
  width="300">
@@ -56,7 +56,7 @@ What you need:
 - Can (Full one)
 - Hammer
 
-Place the right side of the PCB vertically on the edge of the can and start hammering on the upper case of the ESC. This will put pressure on the PCB, which will slowly loosen the glue responsible for holding it in place. I know it seems like nothing happens, but trust me, if you create enough force, the PCB will jump a little out of the frame after time. At this point you can just pull it out by your hands. Example video <a href="https://imgur.com/a/8d38ukp">here</a>.
+Place the right side of the PCB vertically on the edge of the can and start hammering on the upper case of the ESC. This will put pressure on the PCB, which will slowly loosen the glue responsible for holding it in place. I know it seems like nothing happens, but trust me, if you create enough force, the PCB will jump a little out of the frame over time. At this point, you can just pull it out by your hands. Example video <a href="https://imgur.com/a/8d38ukp">here</a>.
 
 <img src="pictures/Removing PCB from frame.png"
  width="300">
@@ -65,7 +65,7 @@ Place the right side of the PCB vertically on the edge of the can and start hamm
 
 ### Drilling
 
-If this all sounds too much for you, you may consider drilling a hole through the case to reach the debug-points. This can be easily done with a normal driller-tip. Please don't forget to put something rubbust between the PCB and the case so that the PCB is protected from damage. An old ram stick is perfect for this. The dimensions for the hole are shown below.
+If this all sounds too much for you, you may consider drilling a hole through the case to reach the debug points. This can be easily done with a normal drill bit. Please don't forget to put something robust between the PCB and the case so that the PCB is protected from damage. An old ram stick is perfect for this. The dimensions for the hole are shown below.
 
 <img src="pictures/NinebotG2ESC - Drilling-point measurements.jpg">
 
@@ -83,7 +83,7 @@ If you've made it this far: <br>Congratulations! The hardest part is done now.
 <img src="pictures/NinebotG2ESC-debug_points - Back-side.jpg"
  width="600">
 
-Please connect 5V and GND before you plug the ST-Link into your smartphone, otherwise you may short-circuit your PCB. SWDIO and SWCLK doesn't matter, they don't have very high voltage or current. If you have unmodified cables, the female cables will most likely be loose on the ESC-pins. You want to use tape to hold the connectors in place.
+Please connect 5V and GND before you plug the ST-Link into your smartphone, otherwise you may short-circuit your PCB. SWDIO and SWCLK don't matter, as they don't have very high voltage or current. If you have unmodified cables, the female cables will most likely be loose on the ESC pins. You want to use tape to hold the connectors in place.
 
 #### Flashing
 
@@ -145,7 +145,7 @@ What you need:
 <img src="pictures/XiaoDash - Step 5.jpg"
  width="300">
 
-Give XiaoDash the permisson to use your ST-link. Now a 10-second countdown will start, in those 10-seconds, you have time to attach the SWDIO-wire, and SWCLK-wire, to their designated fields. No need to rush, the timer will start again if the flash was unsuccessful.
+Permit XiaoDash to use your ST-link. Now a 10-second countdown will start, in those 10 seconds, you have time to attach the SWDIO-wire, and SWCLK-wire, to their designated fields. No need to rush, the timer will start again if the flash was unsuccessful.
 
 If your flash was successful, XiaoDash will show this message:
 
@@ -166,6 +166,6 @@ If you have now connected your ESC to the dashboard, the error code "E3" will be
 
 ### Thank you!
 
-If you've read this far, then you should now know how to flash 3rd-party-firmware onto your G2 ESC. I would like to thank both services, ScooterHackingUtility, aswell as XiaoDash, for offering such great firmware! 
+If you've read this far, then you should now know how to flash 3rd-party-firmware onto your G2 ESC. I would like to thank both services, ScooterHackingUtility, as well as XiaoDash, for offering such great firmware! 
 
 This guide was written from (11/12/2023) to (16/12/2023), and took a lot of effort. If you appreciate my work, a <a href="https://www.paypal.com/donate/?hosted_button_id=JXSMGF7S8TG3Y">donation</a> would be greatly appreciated.
